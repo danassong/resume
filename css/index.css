@@ -1,0 +1,455 @@
+@charset "utf-8";
+
+body, html {
+    height: 100%;
+}
+#section1 {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home {
+    height: 100%;
+    position: relative;
+    background-image: url(../images/bg_uiux.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+.home:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(82, 84, 153, 0.75);
+}
+.home .homeText {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    transform: translateY(-70%);
+}
+.home .homeText .title {
+    font-size: 72px;
+    font-weight: bold;
+    padding: 25px 0px 20px;
+    line-height: 1.1;
+}
+.home .homeText .slogun {
+    color: #fff;
+    padding: 10px 0px 150px;
+    line-height: 1.8;
+}
+.home .homeText .slogun span {
+    font-weight: bold;
+}
+.home .homeText .part {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.home .circle {
+    height: 450px;
+    width: 450px;
+    border-radius: 225px;
+    border: 18px solid #61BC8F;
+    overflow: hidden;
+    animation: colorchange 5s both infinite;
+}
+.home .circle1 {
+    position: absolute;
+    top: -60%;
+    right: 180px;
+    transform: translateY(60%);
+    opacity: 0.4;
+}
+.home .circle2 {
+    position: absolute;
+    top: 50%;
+    right: 180px;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    animation-delay: 0.2s;
+}
+.home .circle3 {
+    position: absolute;
+    top: 160%;
+    right: 180px;
+    transform: translateY(-160%);
+    animation-delay: 0.4s;
+}
+
+@keyframes colorchange {
+    0% { border-color: #61BC8F;}
+    20% { border-color: #4A3C95;}
+    40% { border-color: #B22B8A;}
+    60% { border-color: #C6851B;}
+    80% { border-color: #87C12D;}
+    100% { border-color: #61BC8F;}
+}
+
+@keyframes colorchange1 {
+    0% { border-color: #87C12D;}
+    20% { border-color: #61BC8F;}
+    40% { border-color: #4A3C95;}
+    60% { border-color: #B22B8A;}
+    80% { border-color: #C6851B;}
+    100% { border-color: #87C12D;}
+}
+@keyframes colorchange2 {
+    0% { border-color: #C6851B;}
+    20% { border-color: #87C12D;}
+    40% { border-color: #61BC8F;}
+    60% { border-color: #4A3C95;}
+    80% { border-color: #B22B8A;}
+    100% { border-color: #C6851B;}
+}
+
+
+
+/* -------------------------- section 2 profile */
+#section2 {
+    position: relative;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+.profile {
+    /* background: linear-gradient( -45deg, #5EB48B,  #5355A3); */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 13px;
+    min-height: 100vh;
+    align-items: center;
+}
+.profile .myImage .circle {
+    width: 240px;
+    height: 240px;
+    border-radius: 150px;
+    border: 8px solid #5355A3;
+    /* background: #fff; */
+    left: 80px;
+    animation: colorchange 5s both infinite;
+}
+.profile .myImage .circle1 {
+    position: absolute;
+    top: -20%;
+    transform: translateY(20%);
+    opacity: 0.4;
+}
+.profile .myImage .circle2 {
+    position: absolute;
+    top: 5%;
+    transform: translateY(-5%);
+    opacity: 0.7;
+    animation-delay: 0.2s;
+}
+.profile .myImage .circle3 {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    z-index: 999;
+    animation-delay: 0.4s;
+}
+
+.profile .myImage .profileInfo {
+    position: absolute;
+    color: #5355A3;
+    line-height: 1.5;
+    margin-left: 100px;
+    bottom: 13%;
+}
+.profile .myImage .profileInfo h6 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.profile .myInfo {
+    line-height: 1.8;
+    color: #333;
+    font-size: 12px;
+}
+.profile .myInfo .secTit {
+    color: #5355A3;
+    font-size: 16px;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+.profile .myInfo .education p span {
+    font-weight: 600;
+}
+.profile .myInfo .award table tbody tr {
+    display: grid;
+    grid-template-columns: 80px 350px;
+}
+.profile .myInfo .award table tbody tr td:first-child {
+    font-weight: 600;
+}
+.profile .myInfo .award table tbody tr td span,
+.profile .myInfo .paper .academy {
+    color: #5355A3;
+    font-weight: bold;
+}
+
+
+
+
+#section3 {
+    height: 100%;
+    position: relative;
+}
+#section3 .publishing {
+    height: 100%;
+    position: relative;
+}
+#section3 .publishing .marrow {
+    font-size: 36px;
+    color: #000;
+    position: absolute;
+    bottom: 50px;
+    background: none;
+    z-index: 999;
+}
+#section3 .publishing .prevArrow {
+    display: none;
+}
+#section3 .publishing .nextArrow {
+    right: 5%;
+}
+/* 슬라이드 막대 바 버튼 */
+#section3 .publishing .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+#section3 .publishing .slick-dots li {
+    margin: 0 10px;
+    position: relative;
+    display: inline-block;
+}
+#section3 .publishing .slick-dots li button {
+    /* width: 32px;
+    height: 32px; */
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
+#section3 .publishing .slick-dots li.slick-active button {
+    font-size: 48px;
+    font-weight: bold;
+    color: #5355A3;
+}
+
+
+
+
+#section3 .publishing .pub {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 100vh;
+    position: relative;
+}
+#section3 .publishing .image {
+    place-self: center;
+}
+#section3 .publishing .image img {
+    width: 70%;
+    margin: 0 15%;
+}
+#section3 .publishing .workInfo {
+    width: 100%;
+    place-self: center;
+}
+#section3 .publishing .workInfo h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#section3 .publishing .workInfo ul {
+    margin: 0 20% 80px ;
+}
+#section3 .publishing .workInfo ul li {
+    line-height: 2;
+    font-size: 14px;
+}
+#section3 .publishing .workInfo ul li h6 {
+    display: inline-block;
+    color: #5355A3;
+    width: 100px;
+}
+#section3 .publishing .workInfo > p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+    font-weight: bold;
+}
+#section3 .publishing .workInfo .btn {
+    margin-top: 40px;
+    text-align: center;
+}
+#section3 .publishing .workInfo .btn button {
+    background: #5355A3;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 40px;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+/*------------------- 세번째 섹션: 포트폴리오 갤러리 */
+#section4 {
+    background: #eee;
+    height: 100%;
+}
+.portfolio {
+    display: grid;
+    grid-template-columns: 120px auto;
+    min-height: 100vh;
+    align-items: center;
+}
+.portfolio .pofolList {
+    position: relative;
+}
+.portfolio .pofolList .tab_menu_wrap .tab_menu > li {
+    line-height: 2;
+}
+.portfolio .pofolList .tab_menu_wrap .tab_menu li button {
+    position: relative;
+    background: none;
+    font-size: 14px;
+    color: #5355A3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.portfolio .pofolImage .tab_menu_wrap .tab_menu li button:hover {
+    color: #61BC8F;
+}
+
+/* 오른쪽 */
+.portfolio .pofolImage .gallery {
+    display: grid;
+    grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
+    column-gap: 1%;
+    row-gap: 10px;
+}
+.portfolio .pofolImage .gallery li {
+    opacity: 0;
+    animation:liani 0.5s both;
+    overflow: hidden;
+}
+
+@keyframes liani {
+    0% { opacity:0 }
+    100% { opacity:1 }
+}
+
+/* 갤러리 호버시 정보 */
+.portfolio > div {
+    position: relative;
+}
+.portfolio .pofolImage {
+    position: relative;
+}
+.portfolio .pofolImage .gallery li a {
+    position: relative;
+    display: inline-block;
+}
+.portfolio .pofolImage .gallery li a .imgbox {
+    overflow: hidden;
+}
+.portfolio .pofolImage .gallery li a .overlay {
+    position: absolute;
+    overflow: hidden;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    border-bottom: 6px solid #61BC8F;
+    transition: 0.5s;
+}
+.portfolio .pofolImage .gallery li a:hover .overlay {
+    opacity: 1;
+}
+.portfolio .pofolImage .gallery li a .overlay .pofol_expl {
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    line-height: 1.5;
+    color: #fff;
+}
+.portfolio .pofolImage .gallery li a .overlay .pofol_expl > span {
+    font-size: 10px;
+    color: #61BC8F;
+    line-height: 5;
+}
+.portfolio .pofolImage .gallery li a .overlay .pofol_expl h4 {
+    font-weight: 900;
+}
+.portfolio .pofolImage .gallery li a .overlay .pofol_expl h4 span {
+    font-weight: 500;
+    font-size: 12px;
+}
+.portfolio .pofolImage .gallery li a .overlay .pofol_expl p {
+    margin-top: 20px;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+
+
+
+/* 갤러리 팝업박스 */
+.portfolio .pofolImage .galleryPopup {
+    opacity: 0;
+    position: fixed;
+    top: 50%; bottom: 50%; left: 50%; right: 50%;
+    background: rgba(0,0,0,0.8);
+    z-index: 999999;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.portfolio .pofolImage .galleryPopup.on {
+    opacity: 1;
+    top: 0%; bottom: 0%; left: 0%; right: 0%;
+    overflow: visible;
+}
+.portfolio .galleryPopup .popupList {
+    position: absolute;
+    top: 50%;
+    left: 32.5%; right: 32.5%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.portfolio .pofolImage .galleryPopup .popupList .close {
+    position: absolute;
+    top: -20px; right: -20px;
+    font-size: 40px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+}
+.portfolio .pofolImage .galleryPopup .popupList .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    background: none;
+}
+.portfolio .pofolImage .galleryPopup .popupList .prev {
+    left: -40px;
+}
+.portfolio .pofolImage .galleryPopup .popupList .next {
+    right: -40px;
+}
+
