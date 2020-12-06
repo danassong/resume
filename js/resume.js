@@ -1,8 +1,17 @@
 (function($) {
 
+
+    // 페이지 로딩화면
     $(window).on('load', function(){
         $('.introAni').delay(2000).fadeOut(500)
     })
+
+
+    // 새로고침하면 첫화면이 뜨도록
+    $('html, body').animate({
+        load
+    }, 800)
+
 
     var myFullpage = new fullpage('#fullpage', {
         anchors: ['home', 'profile', 'publishing', 'portfolio', 'contact'],
@@ -11,7 +20,6 @@
 
 
     // 스크롤 탑일때와 아닐때 -- 헤더 상단 / gotop / 스킬 적용
-    var sct = 0;
     $(window).on('hashchange', function () {
 
         var hashtagname = location.hash;
