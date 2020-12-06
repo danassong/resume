@@ -7,10 +7,10 @@
     })
 
 
-    // 새로고침하면 첫화면이 뜨도록
-    $('html, body').animate({
-        load
-    }, 800)
+    // // 새로고침하면 첫화면이 뜨도록
+    // $('html, body').animate({
+    //     load
+    // }, 800)
 
 
     var myFullpage = new fullpage('#fullpage', {
