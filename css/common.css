@@ -7,6 +7,9 @@
     color: #fff;
     border-bottom: 0.6px solid #eee;
 }
+.header-outer.on {
+    color: #61BC8F;
+}
 #header {
     position: relative;
     height: 55px;
@@ -32,4 +35,56 @@
     display: inline-block;
     padding: 0 15px;
     font-size: 12px;
+    font-weight: normal;
 }
+
+
+.introAni {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #61BC8F;
+    font-size: 50px;
+    z-index: 9999999999999999;
+}
+/* .introAni .load {
+    position: relative;
+} */
+.introAni .load i { 
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY( -50%);
+    font-size: 24px;
+    text-align: center;
+    animation: bounceInDown 1s both;
+    /* animation: spin 3s linear infinite; */
+}
+.introAni .load .circle1 {
+    position: absolute;
+    left: 44%;
+    transform: translateX(-44%);
+    /* animation: bounceInDown 1s both infinite; */
+}
+.introAni .load .circle2 {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-48%);
+    /* animation: bounceInDown 1s both; */
+    animation-delay: 0.25s;
+}
+.introAni .load .circle3 {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-52%);
+    /* animation: bounceInDown 1s both; */
+    animation-delay: 0.5s;
+}
+.introAni .load .circle4 {
+    position: absolute;
+    left: 56%;
+    transform: translateX(-56%);
+    /* animation: bounceInDown 1s both; */
+    animation-delay: 0.75s;
+}
+
