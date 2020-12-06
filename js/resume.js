@@ -1,10 +1,10 @@
 (function($) {
 
 
-    // 페이지 로딩화면
-    $(window).on('load', function(){
-        $('.introAni').delay(2000).fadeOut(500)
-    })
+    // // 페이지 로딩화면
+    // $(window).on('load', function(){
+    //     $('.introAni').delay(2000).fadeOut(500)
+    // })
 
 
     // // 새로고침하면 첫화면이 뜨도록
