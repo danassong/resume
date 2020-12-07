@@ -603,6 +603,53 @@ body, html {
 }
 
 
+/* 갤러리 팝업박스 */
+.portfolio .galleryPopup {
+    opacity: 0;
+    position: fixed;
+    top: 50%; bottom: 50%; left: 50%; right: 50%;
+    background: rgba(0,0,0,0.8);
+    z-index: 999999;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.portfolio .galleryPopup.on {
+    opacity: 1;
+    top: 0%; bottom: 0%; left: 0%; right: 0%;
+    overflow: visible;
+}
+.portfolio .galleryPopup .popupList {
+    position: absolute;
+    top: 50%;
+    left: 32.5%; right: 32.5%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.portfolio .galleryPopup .popupList .close {
+    position: absolute;
+    top: -20px; right: -20px;
+    font-size: 40px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+}
+.portfolio .galleryPopup .popupList .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    background: none;
+}
+.portfolio .galleryPopup .popupList .prev {
+    left: -40px;
+}
+.portfolio .galleryPopup .popupList .next {
+    right: -40px;
+}
+
+
 
 
 #section4 {
