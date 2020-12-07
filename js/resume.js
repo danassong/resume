@@ -18,6 +18,60 @@
     })
 
 
+
+    //포트폴리오 갤러리 클릭 이벤트 팝업
+    var href, src, alt, lieq
+
+    $('.portfolio .pofolImage .gallery li a').on('click', '.overlay', function(e){
+        e.preventDefault();
+        lieq = $(this).parent().parent().index()
+        var detailImg = $(this).parent().attr('href')
+        console.log(lieq)
+        $('.galleryPopup').addClass('on')
+        href = $(this).attr('href')
+        src = $(this).find('img').attr('src')
+        alt = $(this).find('img').attr('alt')
+        $('.popupList > div > a').attr('href', href)
+        $('.popupList > div > a > img').attr('src', detailImg)
+        $('.popupList > div > a > img').attr('alt', alt)
+    })
+
+    $('.galleryPopup .popupList .close').on('click', function(){
+        $('.galleryPopup').removeClass('on')
+    })
+
+    $('.popupList').on('click', function(e){
+        e.stopPropagation();
+    })
+
+    function changeList(ind) {
+        href = $('.gallery > li').eq(ind).find('a').attr('href')
+        src = $('.gallery > li').eq(ind).find('img').attr('src')
+        alt = $('.gallery > li').eq(ind).find('img').attr('alt')
+        $('.popupList > div > a').attr('href', href)
+        $('.popupList > div > a > img').attr({'src': src, 'alt': alt}).css({opacity:'0.5'}).animate({opacity:'1'}, 500)
+    }
+
+
+    $('.popupList .prev').on('click', function(){
+        --lieq
+        if (lieq < 0) {
+            lieq = 5
+        }
+        changeList(lieq)
+    })
+
+    $('.popupList .next').on('click', function(){
+        ++lieq
+        if (lieq > 5) {
+            lieq = 0
+        }
+        changeList(lieq)
+    })
+
+
+
+
     // 스크롤 탑일때와 아닐때 -- 헤더 상단 / gotop / 스킬 적용
     $(window).on('hashchange', function () {
 
@@ -34,6 +88,7 @@
         if (hashtagname == '#home') {
             $('#header .nav .depth1 > li').removeClass('on')
             $('#header .nav .depth1 > li:nth-child(1)').addClass('on')
+            $('.galleryPopup').removeClass('on')
         } else if (hashtagname == '#profile') {
             $('#header .nav .depth1 > li').removeClass('on')
             $('#header .nav .depth1 > li:nth-child(2)').addClass('on')
@@ -44,9 +99,11 @@
             $('.profile .myInfo .education').addClass('ani')
             $('.profile .myInfo .award').addClass('ani')
             $('.profile .myInfo .paper').addClass('ani')
+            $('.galleryPopup').removeClass('on')
         } else if (hashtagname == '#publishing') {
             $('#header .nav .depth1 > li').removeClass('on')
             $('#header .nav .depth1 > li:nth-child(3)').addClass('on')
+            $('.galleryPopup').removeClass('on')
         } else if (hashtagname == '#portfolio') {
             $('#header .nav .depth1 > li').removeClass('on')
             $('#header .nav .depth1 > li:nth-child(4)').addClass('on')
@@ -55,6 +112,7 @@
             $('#header .nav .depth1 > li:nth-child(5)').addClass('on')
             $('.contact .contactText h1').addClass('ani')
             $('.contact .contactText .thanks').addClass('ani')
+            $('.galleryPopup').removeClass('on')
         }
     
 
@@ -118,54 +176,5 @@
 
 
      
-    //포트폴리오 갤러리 클릭 이벤트 팝업
-    var href, src, alt, lieq
-
-    $('.portfolio .pofolImage .gallery li a').on('click', '.overlay', function(e){
-        e.preventDefault();
-        lieq = $(this).parent().parent().index()
-        var detailImg = $(this).parent().attr('href')
-        console.log(lieq)
-        $('.galleryPopup').addClass('on')
-        href = $(this).attr('href')
-        src = $(this).find('img').attr('src')
-        alt = $(this).find('img').attr('alt')
-        $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr('src', detailImg)
-        $('.popupList > div > a > img').attr('alt', alt)
-    })
-
-    $('.galleryPopup .popupList .close').on('click', function(){
-        $('.galleryPopup').removeClass('on')
-    })
-
-    $('.popupList').on('click', function(e){
-        e.stopPropagation();
-    })
-
-    function changeList(ind) {
-        href = $('.gallery > li').eq(ind).find('a').attr('href')
-        src = $('.gallery > li').eq(ind).find('img').attr('src')
-        alt = $('.gallery > li').eq(ind).find('img').attr('alt')
-        $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr({'src': src, 'alt': alt}).css({opacity:'0.5'}).animate({opacity:'1'}, 500)
-    }
-
-
-    $('.popupList .prev').on('click', function(){
-        --lieq
-        if (lieq < 0) {
-            lieq = 5
-        }
-        changeList(lieq)
-    })
-
-    $('.popupList .next').on('click', function(){
-        ++lieq
-        if (lieq > 5) {
-            lieq = 0
-        }
-        changeList(lieq)
-    })
 
 })(jQuery)
