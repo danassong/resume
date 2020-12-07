@@ -121,21 +121,22 @@
     //포트폴리오 갤러리 클릭 이벤트 팝업
     var href, src, alt, lieq
 
-    $('.gallery > li > a').on('click', function(e){
+    $('.portfolio .pofolImage .gallery li a').on('click', '.overlay', function(e){
         e.preventDefault();
-        lieq = $(this).parent().index()
+        lieq = $(this).parent().parent().index()
+        var detailImg = $(this).parent().attr('href')
         console.log(lieq)
-        $('.galleryPopup').addClass('on')
+        $('.portfolio .pofolImage .galleryPopup').addClass('on')
         href = $(this).attr('href')
         src = $(this).find('img').attr('src')
         alt = $(this).find('img').attr('alt')
         $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr('src', src)
+        $('.popupList > div > a > img').attr('src', detailImg)
         $('.popupList > div > a > img').attr('alt', alt)
     })
 
-    $('.galleryPopup .close').on('click', function(){
-        $('.galleryPopup').removeClass('on')
+    $('.portfolio .pofolImage .galleryPopup .popupList .close').on('click', function(){
+        $('.portfolio .pofolImage .galleryPopup').removeClass('on')
     })
 
     $('.popupList').on('click', function(e){
