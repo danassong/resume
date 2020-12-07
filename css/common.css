@@ -33,10 +33,15 @@
 }
 #header .nav .depth1 > li > a {
     display: inline-block;
-    padding: 0 15px;
+    margin: 0 15px;
     font-size: 12px;
     font-weight: normal;
 }
+#header .nav .depth1 > li.on > a {
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
 
 
 .introAni {

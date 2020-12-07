@@ -96,6 +96,7 @@ body, html {
     padding: 25px 0px 20px;
     line-height: 1.1;
     animation: zoomIn 0.8s both;
+    font-family: 'Arimo', sans-serif;
 }
 .home .homeText .slogun {
     color: #fff;
@@ -194,27 +195,32 @@ body, html {
     border: 8px solid #5355A3;
     /* background: #fff; */
     left: 80px;
-    animation: colorchange 5s both infinite, fadeInDown 1s both;
+    /* animation: colorchange 5s both infinite; */
 }
 .profile .myImage .circle1 {
     position: absolute;
     top: -20%;
     transform: translateY(20%);
-    /* opacity: 0.4; */
 }
 .profile .myImage .circle2 {
     position: absolute;
     top: 2.5%;
     transform: translateY(-2.5%);
-    /* opacity: 0.7; */
-    animation-delay: 0.2s;
 }
 .profile .myImage .circle3 {
     position: absolute;
     top: 20%;
     transform: translateY(-20%);
     z-index: 999;
-    animation-delay: 0.4s;
+}
+.profile .myImage .circle1.ani {
+    animation: colorchange 5s both infinite, fadeInDown 1s both;
+}
+.profile .myImage .circle2.ani {
+    animation: colorchange 5s both infinite 0.2s, fadeInDown 1s both 0.3s; ;
+}
+.profile .myImage .circle3.ani {
+    animation: colorchange 5s both infinite 0.4s, fadeInDown 1s both 0.6s;
 }
 
 .profile .myImage .profileInfo {
@@ -223,6 +229,8 @@ body, html {
     line-height: 1.5;
     margin-left: 100px;
     bottom: 13%;
+}
+.profile .myImage .profileInfo.ani {
     animation: fadeInLeft 1s both 0.3s;
 }
 .profile .myImage .profileInfo h6 {
@@ -242,13 +250,13 @@ body, html {
     margin: 15px 0 5px;
     font-weight: bold;
 }
-.profile .myInfo .education {
+.profile .myInfo .education.ani {
     animation: fadeIn 1s both 0.5s;
 }
-.profile .myInfo .award {
+.profile .myInfo .award.ani {
     animation: fadeIn 1s both 0.7s;
 }
-.profile .myInfo .paper {
+.profile .myInfo .paper.ani {
     animation: fadeIn 1s both 0.9s;
 }
 .profile .myInfo .education p span {
@@ -355,55 +363,6 @@ body, html {
     100% {background-position: top;}
 }
 
-/* #section2 .decoCircle {
-    position: absolute;
-    left: -10%;
-    z-index: -999;
-    transform: translate(10%, 10%);
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-    border-radius: 500px;
-    border: 15px solid #5355A3;
-    animation: colorchange 5s both infinite, moveUpDown 30s linear infinite;
-}
-#section2 .mainCircle {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translate(-15%, -50%);
-    width: 500px;
-    height: 500px;
-    border-radius: 500px;
-    border: 15px solid #5355A3;
-    z-index: 999;
-    animation: colorchange 5s both infinite;
-}
-#section2 .decoCircle2 {
-    position: absolute;
-    left: 40%;
-    z-index: -999;
-    transform: translate(-40%, -110%);
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-    border-radius: 500px;
-    border: 15px solid #5355A3;
-    animation: colorchange 5s both infinite, moveUpDown2 30s linear infinite reverse;
-} */
-
-/* @keyframes moveUpDown {
-    0% {top: 0%}
-    50% {top: 80%}
-    100% {top: 0%}
-}
-@keyframes moveUpDown2 {
-    0% {top: 80%}
-    50% {top: 0%}
-    100% {top: 80%}
-} */
-
-
 .publishing .workInfo {
     width: 100%;
     place-self: center;
@@ -491,7 +450,7 @@ body, html {
     column-gap: 1%;
     row-gap: 10px;
 }
-.portfolio .pofolImage .gallery li {
+.portfolio .pofolImage .gallery li.ani {
     opacity: 0;
     animation:liani 0.5s both;
     overflow: hidden;
@@ -712,16 +671,16 @@ body, html {
     font-size: 54px;
     font-weight: bold;
 }
+.contact .contactText h1.ani {
+    animation: pulse 0.8s both 0.5s;
+}
 .contact .contactText .thanks {
     font-size: 18px;
     margin: 15px 0;
 }
-/* .contact .me {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50%, -40px);
-} */
+.contact .contactText .thanks.ani {
+    animation: pulse 0.8s both 1s;
+}
 .contact .btn {
     position: absolute;
     top: 90%;

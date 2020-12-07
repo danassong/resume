@@ -7,16 +7,15 @@
     // })
 
 
-    // // 새로고침하면 첫화면이 뜨도록
-    // $('html, body').animate({
-    //     load
-    // }, 800)
-
-
     var myFullpage = new fullpage('#fullpage', {
         anchors: ['home', 'profile', 'publishing', 'portfolio', 'contact'],
         lazyLoad: true
     });
+
+    // 새로고침하면 첫화면이 뜨도록
+    $(window).on('load', function(){
+        location.hash = '#home'
+    })
 
 
     // 스크롤 탑일때와 아닐때 -- 헤더 상단 / gotop / 스킬 적용
@@ -28,18 +27,48 @@
         } else {
             $('.header-outer').removeClass('on')
         }
+
+
+        
+
+        if (hashtagname == '#home') {
+            $('#header .nav .depth1 > li').removeClass('on')
+            $('#header .nav .depth1 > li:nth-child(1)').addClass('on')
+        } else if (hashtagname == '#profile') {
+            $('#header .nav .depth1 > li').removeClass('on')
+            $('#header .nav .depth1 > li:nth-child(2)').addClass('on')
+            $('.profile .myImage .profileInfo').addClass('ani')
+            $('.profile .myImage .circle1').addClass('ani')
+            $('.profile .myImage .circle2').addClass('ani')
+            $('.profile .myImage .circle3').addClass('ani')
+            $('.profile .myInfo .education').addClass('ani')
+            $('.profile .myInfo .award').addClass('ani')
+            $('.profile .myInfo .paper').addClass('ani')
+        } else if (hashtagname == '#publishing') {
+            $('#header .nav .depth1 > li').removeClass('on')
+            $('#header .nav .depth1 > li:nth-child(3)').addClass('on')
+        } else if (hashtagname == '#portfolio') {
+            $('#header .nav .depth1 > li').removeClass('on')
+            $('#header .nav .depth1 > li:nth-child(4)').addClass('on')
+        } else if (hashtagname == '#contact') {
+            $('#header .nav .depth1 > li').removeClass('on')
+            $('#header .nav .depth1 > li:nth-child(5)').addClass('on')
+            $('.contact .contactText h1').addClass('ani')
+            $('.contact .contactText .thanks').addClass('ani')
+        }
     
 
 
-        /* // 포트폴리오 순차적 띄우기
-        var portcount = $('.gallery > li').length
-        if (sct >= $('.portfolio').offset().top) {
+        // 포트폴리오 순차적 띄우기
+        var portcount = $('.portfolio .pofolImage .gallery li').length
+        if (hashtagname == '#portfolio') {
+            $('.portfolio .pofolImage .gallery li').addClass('ani')
             for (var i = 0; i < portcount; i++) {
-                $('.gallery > li').eq(i).css({
+                $('.portfolio .pofolImage .gallery li').eq(i).css({
                     animationDelay: (i + 1) * 0.15 + 's'
                 })
             }    
-        } */
+        }
     
     });
 
