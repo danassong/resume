@@ -516,43 +516,43 @@ body, html {
 
 
 /* 갤러리 팝업박스 */
-.portfolio .pofolImage .galleryPopup {
+.galleryPopup {
     opacity: 0;
     position: absolute;
     top: 50%; bottom: 50%; left: 50%; right: 50%;
     background: rgba(255,255,255,0.8);
     margin: 0;
-    z-index: 9999999;
+    z-index: 999999999999;
     transition: all 0.5s;
     overflow: hidden;
 }
-.portfolio .pofolImage .galleryPopup.on {
+.galleryPopup.on {
     opacity: 1;
     top: 0%; bottom: 0%; left: 0%; right: 0%;
     overflow: visible;
 }
-.portfolio .galleryPopup .popupList {
+.galleryPopup .popupList {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 15%; right: 15%;
     transform: translateY(-50%);
     text-align: center;
 }
-.portfolio .galleryPopup .popupList img {
+.galleryPopup .popupList img {
     position: relative;
-    height: 94%;
-    width: 94%;
+    height: 84%;
+    width: 84%;
 }
 
-.portfolio .pofolImage .galleryPopup .popupList .close {
+.galleryPopup .popupList .close {
     position: absolute;
-    top: 10px; right: -50px;
+    top: 10px; right: -40px;
     font-size: 32px;
     color: #333;
     background: none;
     cursor: pointer;
 }
-.portfolio .pofolImage .galleryPopup .popupList .arrow {
+.galleryPopup .popupList .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -560,11 +560,11 @@ body, html {
     color: #333;
     background: none;
 }
-.portfolio .pofolImage .galleryPopup .popupList .prev {
-    left: -40px;
+.galleryPopup .popupList .prev {
+    left: -30px;
 }
-.portfolio .pofolImage .galleryPopup .popupList .next {
-    right: -40px;
+.galleryPopup .popupList .next {
+    right: -30px;
 }
 
 
@@ -573,16 +573,21 @@ body, html {
 
 #section4 {
     /* background: #5355A3; */
-    background: linear-gradient( -45deg, #5EB48B,  #5355A3);
+    background: linear-gradient( -45deg, #5355A3, #5EB48B);
     height: 100%;
     position: relative;
     overflow: hidden;
-    animation: bgChange 5s both infinite;
+    /* animation: bgChange 2s both infinite; */
 }
 @keyframes bgChange {
-    from {background: linear-gradient( -45deg, #5EB48B,  #5355A3);}
-    50% {background: linear-gradient( -45deg, #5355A3, #5EB48B);}
-    to {background: linear-gradient( -45deg, #5EB48B,  #5355A3);}
+    from {background:  #5EB48B}
+    50% {background:  #5355A3;}
+    to {background: #5EB48B;}
+}
+@keyframes lineChange {
+    from {border-color: #5EB48B;}
+    50% {border-color: #5355A3;}
+    to {border-color: #5EB48B;}
 }
 .contact {
     height: 100%;
@@ -596,20 +601,21 @@ body, html {
     border: 18px solid #61BC8F;
     overflow: hidden;
     /* animation: colorchange 5s both infinite; */
+    animation: lineChange 4s both infinite;
 }
 .contact .circle1 {
     position: absolute;
     top: -50%;
     left: 50%;
     transform: translate(-50%, 50%);
-    opacity: 0.4;
+    opacity: 0.6;
 }
 .contact .circle2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.7;
+    opacity: 0.8;
     animation-delay: 0.2s;
 }
 .contact .circle3 {
@@ -630,6 +636,7 @@ body, html {
 .contact .contactText h1 {
     font-size: 54px;
     font-weight: bold;
+    font-family: 'Arimo', sans-serif;
 }
 .contact .contactText h1.ani {
     animation: pulse 0.8s both 0.5s;
@@ -658,15 +665,15 @@ body, html {
     padding-bottom: 3px;
 }
 .contact .btn a:hover {
-    border-bottom: 3px solid #5EB48B;
+    border-bottom: 3px solid #5355A3;
 }
 .contact .btn i {
     position: absolute;
     top: -10px;
     left: 15px;
-    color: #61BC8F;
+    color: #5EB48B;
     font-size: 15px;
-    padding-left: 12px;
+    padding-left: 14px;
     animation: spin 5s linear infinite;
 }
 .contact .btn .downBtn i {

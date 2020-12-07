@@ -126,7 +126,7 @@
         lieq = $(this).parent().parent().index()
         var detailImg = $(this).parent().attr('href')
         console.log(lieq)
-        $('.portfolio .pofolImage .galleryPopup').addClass('on')
+        $('.galleryPopup').addClass('on')
         href = $(this).attr('href')
         src = $(this).find('img').attr('src')
         alt = $(this).find('img').attr('alt')
@@ -135,8 +135,8 @@
         $('.popupList > div > a > img').attr('alt', alt)
     })
 
-    $('.portfolio .pofolImage .galleryPopup .popupList .close').on('click', function(){
-        $('.portfolio .pofolImage .galleryPopup').removeClass('on')
+    $('.galleryPopup .popupList .close').on('click', function(){
+        $('.galleryPopup').removeClass('on')
     })
 
     $('.popupList').on('click', function(e){
