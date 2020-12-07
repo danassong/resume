@@ -28,6 +28,7 @@
         var detailImg = $(this).parent().attr('href')
         console.log(lieq)
         $('.galleryPopup').addClass('on')
+        $('.header-outer').removeClass('on')
         href = $(this).attr('href')
         src = $(this).find('img').attr('src')
         alt = $(this).find('img').attr('alt')
@@ -38,6 +39,7 @@
 
     $('.galleryPopup .popupList .close').on('click', function(){
         $('.galleryPopup').removeClass('on')
+        $('.header-outer').addClass('on')
     })
 
     $('.popupList').on('click', function(e){
