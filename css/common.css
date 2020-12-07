@@ -39,7 +39,9 @@
 }
 #header .nav .depth1 > li.on > a {
     font-weight: bold;
-    border-bottom: 1px solid;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 5px 10px;
 }
 
 
