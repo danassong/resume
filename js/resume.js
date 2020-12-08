@@ -25,7 +25,7 @@
     $('.portfolio .pofolImage .gallery li a').on('click', '.overlay', function(e){
         e.preventDefault();
         lieq = $(this).parent().parent().index()
-        var detailImg = $(this).parent().attr('data-src')
+        var detailImg = $(this).attr('data-src')
         console.log(lieq)
         $('.galleryPopup').addClass('on')
         $('.header-outer').removeClass('on')
@@ -51,7 +51,7 @@
         src = $('.gallery > li').eq(ind).find('.overlay').attr('data-src')
         alt = $('.gallery > li').eq(ind).find('img').attr('alt')
         $('.popupList > div > a').attr('href', href)
-        $('.popupList > div > a > img').attr({'src': src, 'alt': alt}).css({opacity:'0.5'}).animate({opacity:'1'}, 500)
+        $('.popupList > div > a > img').attr({'src': src}).css({opacity:'0.5'}).animate({opacity:'1'}, 500)
     }
 
 
