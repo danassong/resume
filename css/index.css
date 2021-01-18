@@ -511,7 +511,45 @@ body, html {
     font-size: 11px;
     opacity: 0.7;
 }
+.portfolio .pofolImage .gallery li a .imgbox .btn {
+    position: absolute;
+    z-index: 99999999;
+    top: 20px;
+    left: 10px;
+}
 
+/* 포트폴리오 디테일 */
+.portfolio .pofolImage .more {
+    position: relative;
+}
+.portfolio .pofolImage .more button {
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    color: #5355A3;
+    margin-top: 60px;
+    height: 120px;
+    width: 120px;
+    /* border-radius: 100px; */
+    border: 1.5px #5355A3 solid;
+    background:  #eee;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.6;
+    display: inline-block;
+    animation: pulse 1s linear 2s infinite;
+    transition: 0.5s;
+}
+.portfolio .pofolImage .more button a {
+    display: inline-block;
+    /* padding: 40px 34px; */
+    padding: 24px 14px;
+}
+.portfolio .pofolImage .more:hover button {
+    color: #61BC8F;
+    border: 1px #61BC8F solid;
+    background: #eee;
+}
 
 
 
