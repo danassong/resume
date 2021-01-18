@@ -511,12 +511,6 @@ body, html {
     font-size: 11px;
     opacity: 0.7;
 }
-.portfolio .pofolImage .gallery li a .imgbox .btn {
-    position: absolute;
-    z-index: 99999999;
-    top: 20px;
-    left: 10px;
-}
 
 /* 포트폴리오 디테일 */
 .portfolio .pofolImage .more {
