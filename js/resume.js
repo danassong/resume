@@ -58,14 +58,14 @@
     $('.popupList .prev').on('click', function(){
         --lieq
         if (lieq < 0) {
-            lieq = 5
+            lieq = 6
         }
         changeList(lieq)
     })
 
     $('.popupList .next').on('click', function(){
         ++lieq
-        if (lieq > 5) {
+        if (lieq > 6) {
             lieq = 0
         }
         changeList(lieq)
