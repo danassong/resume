@@ -399,6 +399,15 @@ body, html {
     background: #5355A3;
     color: #fff;
     border-radius: 40px;
+    border: 1.5px #5355A3 solid;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+.publishing .workInfo .btn button:hover {
+    background: #fff;
+    color: #5355A3;
+    border: 1.5px #5355A3 solid;
+    border-radius: 40px;
     margin: 0 10px;
 }
 .publishing .workInfo .btn button a {
@@ -522,13 +531,14 @@ body, html {
     right: 15px;
     color: #5355A3;
     margin-top: 60px;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     /* border-radius: 100px; */
     border: 1.5px #5355A3 solid;
     background:  #eee;
     font-weight: bold;
     font-family: 'Arimo', sans-serif;
+    font-size: 12px;
     line-height: 1.6;
     display: inline-block;
     animation: pulse 1s linear 2s infinite;
@@ -537,7 +547,7 @@ body, html {
 .portfolio .pofolImage .more button a {
     display: inline-block;
     /* padding: 40px 34px; */
-    padding: 24px 14px;
+    padding: 12px 14px;
 }
 .portfolio .pofolImage .more:hover button {
     color: #61BC8F;

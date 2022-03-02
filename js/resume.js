@@ -136,7 +136,7 @@
     $('.publishing').slick({
         dots: true,
         infinite: true,
-        speed: 2000,
+        speed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
